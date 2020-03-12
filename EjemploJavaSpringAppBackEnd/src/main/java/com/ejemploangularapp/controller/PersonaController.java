@@ -52,7 +52,7 @@ public class PersonaController {
 
     @PutMapping(name = "/editar", path = {"/{id}"})
     public Persona edit(@RequestBody Persona persona, @PathVariable("id") Integer id) {
-        persona.setId(id);
+        persona.setIdPersona(id);
         return this.service.edit(persona);
     }
 

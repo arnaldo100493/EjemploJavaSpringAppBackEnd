@@ -29,7 +29,7 @@ public class Persona implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idPersona;
 
     @Column
     private String nombre;
@@ -38,35 +38,35 @@ public class Persona implements Serializable {
     private String apellido;
 
     public Persona() {
-        this.id = 0;
+        this.idPersona = 0;
         this.nombre = "";
         this.apellido = "";
     }
 
     public Persona(String nombre, String apellido) {
-        this.id = 0;
+        this.idPersona = 0;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
     public Persona(Integer id, String nombre, String apellido) {
-        this.id = id;
+        this.idPersona = id;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
     /**
-     * @return the id
+     * @return the idPersona
      */
-    public Integer getId() {
-        return id;
+    public Integer getIdPersona() {
+        return idPersona;
     }
 
     /**
-     * @param id the id to set
+     * @param idPersona the idPersona to set
      */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdPersona(Integer idPersona) {
+        this.idPersona = idPersona;
     }
 
     /**
@@ -99,6 +99,6 @@ public class Persona implements Serializable {
 
     @Override
     public String toString() {
-        return "Persona{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + '}';
+        return "Persona{" + "id=" + idPersona + ", nombre=" + nombre + ", apellido=" + apellido + '}';
     }
 }
