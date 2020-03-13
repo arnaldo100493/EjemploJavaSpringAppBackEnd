@@ -33,7 +33,7 @@ public class PersonaServiceImpl implements PersonaService {
 
     @Override
     public Persona listById(Integer id) {
-        return this.repository.findOne(id);
+        return this.repository.findById(id);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class PersonaServiceImpl implements PersonaService {
 
     @Override
     public Persona delete(Integer id) {
-        Persona persona = this.repository.findOne(id);
+        Persona persona = this.repository.findById(id);
         if (persona != null) {
             this.repository.delete(persona);
         }

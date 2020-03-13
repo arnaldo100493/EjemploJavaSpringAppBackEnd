@@ -17,7 +17,7 @@ public interface PersonaRepository extends Repository<Persona, Integer> {
 
     public List<Persona> findAll();
 
-    public Persona findOne(Integer id);
+    public Persona findById(Integer id);
 
     public Persona save(Persona persona);
 
